@@ -1,0 +1,123 @@
+{
+  "FETCH-GET": {
+    "prefix": "fetch-get",
+    "body": [
+      "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID--remove to fetch all**}\"",
+      "  fetch(url, {",
+      "    method: \"GET\",",
+      "  })",
+      "    .then((response) => response.json())",
+      "    .then((result) => {",
+      "      console.log(result, \"Get Successful✅✅✅✅✅✅\")",
+      "    })",
+      "    .catch((error) => {",
+      "      console.log(error, \"Get Errored❌❌❌❌❌❌\")",
+      "    })"
+    ],
+    "description": "FETCH-GET"
+  },
+  "FETCH-POST": {
+    "prefix": "fetch-post",
+    "body": [
+      "  let url = \"https://jsonplaceholder.typicode.com/posts\"",
+      "  let myPayloadToPost = { firstKey: \"firstValue\", secondKey: \"secondValue\" }",
+      "  fetch(url, {",
+      "    method: \"POST\",",
+      "    body: JSON.stringify(myPayloadToPost),",
+      "  })",
+      "    .then((response) => response.json())",
+      "    .then((json) => console.log(json, \"Post Successful✅✅✅✅✅✅\"))",
+      "    .catch((error) => {",
+      "      console.log(error, \"Post Errored❌❌❌❌❌❌\")",
+      "    })"
+    ],
+    "description": "FETCH-POST"
+  },
+  "FETCH-PUT": {
+    "prefix": "fetch-put",
+    "body": [
+      "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+      "  let myPayloadToPut = { firstKey: \"firstValue\", secondKey: \"secondValue\" }",
+      "  fetch(url, {",
+      "    method: \"PUT\",",
+      "    body: JSON.stringify(myPayloadToPut),",
+      "  })",
+      "    .then((response) => response.json())",
+      "    .then((json) => console.log(json, \"Put Successful✅✅✅✅✅✅\"))",
+      "    .catch((error) => {",
+      "      console.log(error, \"Put Errored❌❌❌❌❌❌\")",
+      "    })"
+    ],
+    "description": "FETCH-PUT"
+  },
+  "FETCH-PATCH": {
+    "prefix": "fetch-patch",
+    "body": [
+      "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+      "  let myPayloadToPatch = { keyToBeChanged: \"valueToBeChanged\", notRequiredIfNoChangesKey: \"notRequiredIfNoChangesKey\" }",
+      "  fetch(url, {",
+      "    method: \"PATCH\",",
+      "    body: JSON.stringify(myPayloadToPatch),",
+      "  })",
+      "    .then((response) => response.json())",
+      "    .then((json) => console.log(json, \"Patch Successful✅✅✅✅✅✅\"))",
+      "    .catch((error) => {",
+      "      console.log(error, \"Patch Errored❌❌❌❌❌❌\")",
+      "    })"
+    ],
+    "description": "FETCH-PATCH"
+  },
+  "FETCH-DELETE": {
+    "prefix": "fetch-delete",
+    "body": [
+      "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+      "  fetch(url, {",
+      "    method: \"DELETE\",",
+      "  })",
+      "    .then((response) => response.json())",
+      "    .then((json) => console.log(json, \"Delete Successful✅✅✅✅✅✅\"))",
+      "    .catch((error) => {",
+      "      console.log(error, \"Delete Errored❌❌❌❌❌❌\")",
+      "    })"
+    ],
+    "description": "FETCH-DELETE"
+  },
+  "MAP_REACT": {
+    "prefix": "map-react",
+    "body": [
+      "      {",
+      "        <div>",
+      "          {arr.map((item, index) => (",
+      "            <div key={item.somethingInItem}>",
+      "              <h1>{item}</h1>",
+      "            </div>",
+      "          ))}",
+      "        </div>",
+      "      }"
+    ],
+    "description": "MAP_REACT"
+  },
+  "console.log()": {
+    "prefix": "c",
+    "body": [
+      "console.log('$1', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
+    ]
+  },
+  "ANONIMOUS-FUNCTION": {
+    "prefix": "anfn",
+    "body": [
+      "  let myFunction = (params) => {",
+      "    console.log(params, \"<------This is the function Params😊\")",
+      "  }"
+    ],
+    "description": "ANONIMOUS-FUNCTION"
+  },
+  "BUTTON-ONCLICK": {
+    "prefix": "b",
+    "body": [
+      "      <button onClick={() => myFunction(\"hi\")}>Click Me</button>",
+      ""
+    ],
+    "description": "BUTTON-ONCLICK"
+  }
+}

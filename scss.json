@@ -1,0 +1,11 @@
+{
+  "DISPLAY-FLEX-CENTER": {
+    "prefix": "display",
+    "body": [
+      "    display: flex;",
+      "    justify-content: center;",
+      "    align-items: center;"
+    ],
+    "description": "DISPLAY-FLEX-CENTER"
+  }
+}

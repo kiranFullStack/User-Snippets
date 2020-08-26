@@ -1,0 +1,9 @@
+{
+  "BUTTON-ONCLICK": {
+    "prefix": "b",
+    "body": [
+      "      <button onClick={() => myFunction(\"hi\")}>Click Me</button>"
+    ],
+    "description": "BUTTON-ONCLICK"
+  }
+}
