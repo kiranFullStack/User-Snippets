@@ -2,10 +2,100 @@
   "DISPLAY-FLEX-CENTER": {
     "prefix": "display",
     "body": [
-      "    display: flex;",
-      "    justify-content: center;",
-      "    align-items: center;"
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;"
     ],
     "description": "DISPLAY-FLEX-CENTER"
+  },
+  "MEDIA-QUERY": {
+    "prefix": "media",
+    "body": [
+      ".myDiv {",
+      "  background-color: green;",
+      "}",
+      "// mobile: \"425px\"",
+      "// tablet: \"768px\"",
+      "// laptop: \"1024px\"",
+      "// laptop-L: \"1440px\"",
+      "// 4k-Monitor: \"2560px\"",
+      "@media screen and (max-width: 1024px) and (min-width: 768px) {",
+      "  .myDiv {",
+      "    background-color: red;",
+      "  }",
+      "}"
+    ],
+    "description": "MEDIA-QUERY"
+  },
+  "BG_IMAGE": {
+    "prefix": "background-image",
+    "body": [
+      ".myDiv {",
+      "  background-image: url(\"https://cdn.arstechnica.net/wp-content/uploads/2019/05/GettyImages-843466180.png\"); /* The image used */",
+      "  background-color: #cccccc; /* Used if the image is unavailable */",
+      "  height: 5000px; /* You must set a specified height */",
+      "  background-position: center; /* Center the image */",
+      "  background-repeat: no-repeat; /* Do not repeat the image */",
+      "  background-size: cover; /* Resize the background image to cover the entire container */",
+      "}"
+    ],
+    "description": "BG_IMAGE"
+  },
+  "TRANSITION": {
+    "prefix": "transition-hover",
+    "body": [
+      "// Transition happens between two states eg. hover, active, focus, visited",
+      ".myDiv {",
+      "  width: 100px;",
+      "  height: 100px;",
+      "  background: red;",
+      "  transition-property: width, background; // relative order -- make it \"all\" if you want all to transition",
+      "  transition-duration: 2s, 4s; // effects relatively ordered animation properties",
+      "  transition-delay: 3s, 2s; // effects delay of all animation properties",
+      "  transition-timing-function: ease;",
+      "}",
+      "",
+      ".myDiv:hover {",
+      "  width: 300px;",
+      "  background: green;",
+      "}"
+    ],
+    "description": "TRANSITION"
+  },
+  "BACKGROUND-GRADIENT": {
+    "prefix": "background-gradient",
+    "body": [
+      "    background: linear-gradient(90deg, red, yellow, green 70% 34%);"
+    ],
+    "description": "BACKGROUND-GRADIENT"
+  },
+  "ANIMATION": {
+    "prefix": "animation",
+    "body": [
+      "/* The element to apply the animation to */",
+      ".myDiv {",
+      "  width: 1000px;",
+      "  height: 1000px;",
+      "  background-color: red;",
+      "  animation-name: animationName;",
+      "  animation-duration: 2s;",
+      "  animation-iteration-count: infinite;",
+      "  animation-direction: alternate;",
+      "  animation-timing-function: ease-in-out;",
+      "}",
+      "",
+      "/* The animation code */",
+      "@keyframes animationName {",
+      "  from {",
+      "    background-color: red;",
+      "    height: 100px;",
+      "  }",
+      "  to {",
+      "    background-color: yellow;",
+      "    height: 1000px;",
+      "  }",
+      "}"
+    ],
+    "description": "ANIMATION"
   }
 }

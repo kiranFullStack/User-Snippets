@@ -1,9 +1,24 @@
 {
   "BUTTON-ONCLICK": {
-    "prefix": "b",
+    "prefix": "button-onClick",
     "body": [
       "      <button onClick={() => myFunction(\"hi\")}>Click Me</button>"
     ],
     "description": "BUTTON-ONCLICK"
+  },
+  "MAP_REACT": {
+    "prefix": "map-react",
+    "body": [
+      "      {",
+      "        <div>",
+      "          {${1:arr}.map((item, index) => (",
+      "            <div key={item.somethingInItem}>",
+      "              <h1>{item}</h1>",
+      "            </div>",
+      "          ))}",
+      "        </div>",
+      "      }"
+    ],
+    "description": "MAP_REACT"
   }
 }

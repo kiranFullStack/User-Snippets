@@ -82,42 +82,19 @@
     ],
     "description": "FETCH-DELETE"
   },
-  "MAP_REACT": {
-    "prefix": "map-react",
-    "body": [
-      "      {",
-      "        <div>",
-      "          {arr.map((item, index) => (",
-      "            <div key={item.somethingInItem}>",
-      "              <h1>{item}</h1>",
-      "            </div>",
-      "          ))}",
-      "        </div>",
-      "      }"
-    ],
-    "description": "MAP_REACT"
-  },
   "console.log()": {
     "prefix": "c",
     "body": [
       "console.log('$1', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
     ]
   },
-  "ANONIMOUS-FUNCTION": {
-    "prefix": "anfn",
+  "ARROW-FUNCTION": {
+    "prefix": "f",
     "body": [
       "  let myFunction = (params) => {",
       "    console.log(params, \"<------This is the function Params😊\")",
       "  }"
     ],
-    "description": "ANONIMOUS-FUNCTION"
-  },
-  "BUTTON-ONCLICK": {
-    "prefix": "b",
-    "body": [
-      "      <button onClick={() => myFunction(\"hi\")}>Click Me</button>",
-      ""
-    ],
-    "description": "BUTTON-ONCLICK"
+    "description": "ARROW-FUNCTION"
   }
 }
