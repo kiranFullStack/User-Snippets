@@ -96,5 +96,167 @@
       "  }"
     ],
     "description": "ARROW-FUNCTION"
+  },
+  "STORE-REDUX": {
+    "prefix": "store-redux",
+    "body": [
+      "import { createStore, applyMiddleware } from \"redux\"",
+      "import { composeWithDevTools } from \"redux-devtools-extension\"",
+      "import thunk from \"redux-thunk\"",
+      "import rootReducer from \"./rootReducer\"",
+      "",
+      "const store = createStore(",
+      "  rootReducer,",
+      "  composeWithDevTools(applyMiddleware(thunk))",
+      ")",
+      "",
+      "export default store",
+      "",
+      "//NPM I these dependencies👉🏼👉🏼👉🏼",
+      "npm i axios redux react-redux redux-devtools-extension redux-thunk"
+    ],
+    "description": "STORE-REDUX"
+  },
+
+  "ROOT-REDUCER": {
+    "prefix": "root-reducer",
+    "body": [
+      "import { combineReducers } from \"redux\"",
+      "import nameReducer from \"./name/nameReducer\"",
+      "// import nameReducer2 from \"./name2/nameReducer2\"",
+      "",
+      "const rootReducer = combineReducers({",
+      "  nameReducer: nameReducer,",
+      "  // nameReducer2: nameReducer2,",
+      "})",
+      "",
+      "export default rootReducer",
+      ""
+    ],
+    "description": "ROOT-REDUCER"
+  },
+
+  "INDEX_REDUX": {
+    "prefix": "index-redux",
+    "body": [
+      "import React from \"react\"",
+      "import ReactDOM from \"react-dom\"",
+      "import \"./index.css\"",
+      "import App from \"./App\"",
+      "import * as serviceWorker from \"./serviceWorker\"",
+      "import { Provider } from \"react-redux\"",
+      "import store from \"./redux/store\"",
+      "",
+      "ReactDOM.render(",
+      "  <React.StrictMode>",
+      "    <Provider store={store}>",
+      "      <App />",
+      "    </Provider>",
+      "  </React.StrictMode>,",
+      "  document.getElementById(\"root\")",
+      ")",
+      "",
+      "// If you want your app to work offline and load faster, you can change",
+      "// unregister() to register() below. Note this comes with some pitfalls.",
+      "// Learn more about service workers: https://bit.ly/CRA-PWA",
+      "serviceWorker.unregister()",
+      ""
+    ],
+    "description": "INDEX_REDUX"
+  },
+
+  "ACTIONS": {
+    "prefix": "actions",
+    "body": [
+      "import { INCREMENT } from \"./nameTypes\"",
+      "import { DECREMENT } from \"./nameTypes\"",
+      "",
+      "export const increment = (number = 1) => {",
+      "  return {",
+      "    type: INCREMENT,",
+      "    payload: number,",
+      "  }",
+      "}",
+      "",
+      "export const decrement = (number = 1) => {",
+      "  return {",
+      "    type: DECREMENT,",
+      "    payload: number,",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "ACTIONS"
+  },
+  "TYPES": {
+    "prefix": "types",
+    "body": [
+      "export const INCREMENT = \"INCREMENT\"",
+      "export const DECREMENT = \"DECREMENT\"",
+      ""
+    ],
+    "description": "TYPES"
+  },
+  "REDUCER": {
+    "prefix": "reducer",
+    "body": [
+      "import { INCREMENT } from \"./nameTypes\"",
+      "import { DECREMENT } from \"./nameTypes\"",
+      "",
+      "const initialState = {",
+      "  numOfName: 10,",
+      "}",
+      "",
+      "const nameReducer = (state = initialState, action) => {",
+      "  switch (action.type) {",
+      "    case INCREMENT:",
+      "      return {",
+      "        ...state,",
+      "        numOfName: state.numOfName + action.payload,",
+      "      }",
+      "    case DECREMENT:",
+      "      return {",
+      "        ...state,",
+      "        numOfName: state.numOfName - action.payload,",
+      "      }",
+      "",
+      "    default:",
+      "      return state",
+      "  }",
+      "}",
+      "",
+      "export default nameReducer",
+      ""
+    ],
+    "description": "REDUCER"
+  },
+  "INDEX-ROOT-REDUCER": {
+    "prefix": "index-root-reducer",
+    "body": ["export * from \"./name/nameActions\"", ""],
+    "description": "INDEX-ROOT-REDUCER"
+  },
+  "COMPONENT-REDUX": {
+    "prefix": "component-redux",
+    "body": [
+      "import React from \"react\"",
+      "import { useSelector, useDispatch } from \"react-redux\"",
+      "import { increment, decrement } from \"../redux\"",
+      "",
+      "function NameComponent() {",
+      "  const numOfName = useSelector((state) => state.nameReducer.numOfName)",
+      "  const dispatch = useDispatch()",
+      "  return (",
+      "    <div>",
+      "      <h2>Number of Name - {numOfName} </h2>",
+      "      <button onClick={() => dispatch(increment())}>Increment Name...</button>",
+      "      <button onClick={() => dispatch(decrement())}>Decrement Name...</button>",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default NameComponent",
+      ""
+    ],
+    "description": "COMPONENT-REDUX"
   }
 }

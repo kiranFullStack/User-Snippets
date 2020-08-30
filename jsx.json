@@ -20,5 +20,13 @@
       "      }"
     ],
     "description": "MAP_REACT"
+  },
+  "BUTTON-REDUX": {
+    "prefix": "button-redux",
+    "body": [
+      "    name-{name}",
+      "    <button onClick={() => dispatch(nameFetch(3))}>-</button>"
+    ],
+    "description": "BUTTON-REDUX"
   }
 }
